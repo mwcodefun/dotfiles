@@ -19,6 +19,12 @@ install_profile(){
         echo "append profile success"
     fi
 }
+finish(){
+    echo ">Run these commands finish install."
+    ehco "source $HOME/.profile"
+
+}
 
 clone-or-download
 install_profile
+finish
