@@ -2,8 +2,8 @@
 clone-or-download(){
     if ! command -v git &> /dev/null
     then
-        wget -O mw-dev-tool.zip https://codeload.github.com/mwcodefun/mw-dev-tool/zip/refs/heads/master
-        unzip mw-dev-tool.zip
+        wget -O -c mw-dev-tool.zip https://codeload.github.com/mwcodefun/mw-dev-tool/zip/refs/heads/master
+        unzip -o mw-dev-tool.zip
         cd mw-dev-tool-master
     else
         git clone git@github.com:mwcodefun/mw-dev-tool.git
