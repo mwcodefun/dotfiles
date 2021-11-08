@@ -3,7 +3,6 @@ start(){
   clear
   echo "================================="
   echo "Start install software on wsl"
-  echo "${INSTALL_HOME}"
   cd $HOME
 }
 
