@@ -7,7 +7,7 @@ start(){
 }
 
 change-apt-source(){
-  sed -i "s/security.ubuntu.com/mirrors.aliyun.com/"
+  sed -i "s/security.ubuntu.com/mirrors.aliyun.com|g" /etc/apt/sources.list
 }
 
 install-linux-package(){
@@ -45,11 +45,12 @@ clone-self-repository(){
   echo "Cloning dotfiles repository"
   echo "--------------------------------------------"
 
-  git clone https://github.com/mwcodefun/mw-dev-tool
-  cd mw-dev-tool
+  git clone https://github.com/mwcodefun/dotfiles `$HOME`
+  cd dotfiles
   rm -rf .git
 }
 clone-git-repositories(){
+  cd $HOME
   mkdir java-projects &2 > /dev/null
   cd java-projects
   if [ ! -e order_push ]; then
@@ -65,6 +66,12 @@ clone-git-repositories(){
     git clone https://gitee.com/lensung/x-taobao-sdk.git
   fi
   cd $HOME
+}
+zshrc(){
+  echo "==========================================================="
+  echo "                     Import mw's zsh rc."
+  echo "-----------------------------------------------------------"
+  cat $HOME/dotfiles/profile/wsl.profile > $HOME/.zshrc
 }
 start
 change-apt-source
