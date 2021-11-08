@@ -27,13 +27,13 @@ clone-self-repository(){
 clone-git-repositories(){
   mkdir java-projects &2 > /dev/null
   cd java-projects
-  if [[ !-e order_push ]];then
+  if [ ! -e order_push ]; then
     git clone https://gitee.com/lensung/order_push.git
   fi
-  if [[ !-e trade-sync ]];then
+  if [ ! -e trade-sync ]; then
     git clone https://gitee.com/lensung/trade-sync.git
   fi
-  if [[ !-e x-taobao-sdk ]];then
+  if [ ! -e x-taobao-sdk ]; then
     git clone https://gitee.com/lensung/x-taobao-sdk.git
   fi
 }
