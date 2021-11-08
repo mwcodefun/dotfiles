@@ -1,6 +1,4 @@
 #!/bin/bash
-set -eux
-INSTALL_HOME = `dirname $0`
 start(){
   clear
   echo "================================="
