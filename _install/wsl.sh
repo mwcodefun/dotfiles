@@ -36,9 +36,10 @@ clone-git-repositories(){
   if [ ! -e x-taobao-sdk ]; then
     git clone https://gitee.com/lensung/x-taobao-sdk.git
   fi
+  cd $HOME
 }
 start
 change-apt-source
 install-linux-package
 clone-self-repository
-
+clone-git-repositories
