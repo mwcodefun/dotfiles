@@ -22,7 +22,6 @@ install_profile(){
 finish(){
     echo ">Run these commands finish install."
     ehco "source $HOME/.profile"
-
 }
 
 clone-or-download
